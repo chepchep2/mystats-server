@@ -22,5 +22,7 @@ func SetupRouter(h *handler.Handler, app *fiber.App) {
 	{
 		api.Get("/profile", h.GetProfile)
 		api.Get("/records", h.GetRecords)
+		api.Post("/records/batter", h.CreateBatterRecord)
+		api.Post("/records/pitcher", h.CreatePitcherRecord)
 	}
 }
